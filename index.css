@@ -1,0 +1,50 @@
+body{
+    text-align: center;
+    font-size: larger;
+    font-style: oblique;
+    background-color: bisque;
+}
+@keyframes intro {
+  /*from {background-image: linear-gradient(crimson,yellow);}
+  to {background-image: linear-gradient(purple,blue);}*/
+  from{background-color: rosybrown;}
+  to{background-color: purple;}
+}
+header{
+    background-color: rosybrown;
+    color: aliceblue;
+    justify-content: center;
+    width: 300px;
+    height: aut0;
+    display: inline-flex;
+    border: 10px ridge blue;
+    border-radius: 50px;
+     transition: 2s ;
+     animation-name: intro;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+}
+#intro{
+    background-color: rosybrown;
+    color: aliceblue;
+    justify-content: center;
+    width: 300px;
+    height: aut0;
+    display: inline-flex;
+    border: 10px ridge blue;
+    border-radius: 50px;
+     transition: 2s ;
+    
+     animation-name: intro;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+   
+}
+#intro:hover{
+    width: 500px;
+    
+}
+header:hover{
+    width: 400px;
+    
+}
