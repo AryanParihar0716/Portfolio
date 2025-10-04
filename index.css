@@ -4,6 +4,28 @@ body{
     font-style: oblique;
     background-color: bisque;
 }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateX(-200px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
 @keyframes intro {
   /*from {background-image: linear-gradient(crimson,yellow);}
   to {background-image: linear-gradient(purple,blue);}*/
@@ -17,12 +39,14 @@ header{
     width: 300px;
     height: aut0;
     display: inline-flex;
+    flex-direction: row;
     border: 10px ridge blue;
     border-radius: 50px;
-     transition: 2s ;
-     animation-name: intro;
+     /*animation-name: intro;
     animation-duration: 4s;
-    animation-iteration-count: 5;
+    animation-iteration-count: 5;*/
+    opacity: 1.5; /* Ensures the element starts hidden before the animation */
+    animation: fadeIn 2s ease-in-out forwards
 }
 #intro{
     background-color: rosybrown;
@@ -31,20 +55,42 @@ header{
     width: 300px;
     height: aut0;
     display: inline-flex;
+    flex-direction: row;
     border: 10px ridge blue;
     border-radius: 50px;
-     transition: 2s ;
     
-     animation-name: intro;
+    animation-name: intro,pulse;
     animation-duration: 4s;
     animation-iteration-count: 5;
+    
    
 }
-#intro:hover{
-    width: 500px;
-    
+
+#My_Image{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 50%;
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
-header:hover{
-    width: 400px;
-    
+footer {
+    background-color: rosybrown;
+    color: aliceblue;
+    padding: 20px 0;
+    border-top: 5px ridge blue;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    font-style: oblique;
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 3s forwards; /* delayed fadeIn */
+}
+footer .social a {
+    color: aliceblue;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
 }
