@@ -1,0 +1,99 @@
+body{
+    text-align: center;
+   
+    font-style: oblique;
+    background-color: bisque;
+}
+#head{
+    text-align: center;
+    text-shadow: 2px 2px red;
+    font-size: xx-large;
+}
+/*#project1,#project2{
+  display:inline-block;
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+  background-color: aquamarine;
+  border: 10px ridge red;
+  border-radius: 50px;
+  animation: slideIn 2s forwards;
+}*/
+#projects {
+  display: flex;                /* enables horizontal layout */
+  justify-content: center;      /* centers both boxes horizontally */
+  align-items: flex-start;      /* aligns them at the top */
+  gap: 40px;                    /* space between project1 and project2 */
+  margin-top: 50px;             /* optional spacing from header */
+}
+
+#project1, #project2,#project3{
+  width: 400px;
+  height: 250px;                /* optional for equal height */
+  text-align: center;
+  background-color: aquamarine;
+  border: 10px ridge red;
+  border-radius: 50px;
+  animation: slideIn 2s forwards;
+}
+#back{
+  font-weight: 500;
+  font-size: large;
+  font-style: italic;
+  color: aliceblue;
+  background-color: brown;
+  border-radius: 5px;
+  border: 10px ridge blueviolet;
+}
+footer {
+    background-color: rosybrown;
+    color: aliceblue;
+    padding: 20px 0;
+    border-top: 5px ridge blue;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    font-style: oblique;
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 3s forwards; /* delayed fadeIn */
+}
+footer .social a {
+    color: aliceblue;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateX(-200px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+@keyframes intro {
+  /*from {background-image: linear-gradient(crimson,yellow);}
+  to {background-image: linear-gradient(purple,blue);}*/
+  from{background-color: rosybrown;}
+  to{background-color: purple;}
+}
+#more{
+  font-weight: 600;
+  font-size: x-large;
+  color: blue;
+  animation: pulse 2s ease-in-out 3s forwards;
+}
